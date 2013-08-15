@@ -1,4 +1,4 @@
 jquery.create
 =============
 
-jQuery plugin for creating DOM elements easy way (actually, document.createElement() wrapper)
+jQuery plugin for creating DOM elements easy way (actually, <i>document.createElement()</i> wrapper)
