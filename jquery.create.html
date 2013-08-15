@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta name="author" content="ern0" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+		<script type="text/javascript" src="jquery.create.js"></script>
+	</head>
+<!-- CSS -------------------------------------------------------------->	
+	<style media="all" type="text/css">
+body {
+	color: #220000;
+	background: #ffffff;
+	margin: 4px;
+	padding: 0;
+	font-family: Sans-Serif;
+	font-size: 1.2em;
+}	
+.box {
+	color: #444444;
+	background: #eeeeee;
+	margin: 4px auto 4px auto;
+	border: 2px solid #444444;
+	padding: 6px;
+	width: 80%;
+	text-align: center;
+	font-size: 1.5em;
+}
+br {
+	margin-bottom: 8px;
+}
+em {
+	background: #eeeeee;
+	padding: 2px;
+	font-style: normal;
+	font-family: Monospace;
+	font-size: 1.2em;
+	border: 1px solid #dddddd;
+}
+.footer {
+	border-top: 1px solid #cccccc;
+	font-size: 0.6em;
+	color: #cccccc;
+	text-align: right;
+}
+	</style>	
+	
+<!-- JS --------------------------------------------------------------->	
+	<script language="javascript">
+
+		$(window).ready(function() {  
+	
+			$("#intro").append( 
+				$.create("div").addClass("box").html("jquery.create")
+			);
+			
+			for (var n = 1; n <= 8; n++) {
+				$("#question").append(
+					$.create("div").html(
+						"Is there any " + n + "-line jquery plugin?"
+					)
+				);
+			} // for
+			
+		}); // $(window).ready()
+	
+	</script>	
+<!-- HTML ------------------------------------------------------------->
+	<body>
+
+		<p>
+			You can imagine how surprised I was
+			when I found in 2013 summer that
+			there is no jQuery module yet
+			which wraps
+			<i>document.createElement()</i>!
+		</p>
+
+		<p id="intro">
+			So, I've made it, here is the 
+			long-waited jQuery plugin called:
+		</p>
+		
+		<p>
+			Usage: 
+			<br/>
+			&nbsp;<em>$("#container").append(&nbsp;<b>$.create("div")</b>.addClass("box").html("Hello, world!")&nbsp;);</em>
+			<br/>
+			&nbsp;<em>$.create("tr","row-8");  // second parm: ID</em>
+		</p>
+
+		<p>
+			I know, it's not the most useful
+			plugin of the jQuery world, 
+			but I think
+			<em>$.create("div")</em>
+			looks better than
+			<em>elm = $("&lt;div&gt;&lt;/div&gt;")</em>
+			or
+			<em>elm = $("&lt;div&gt;")</em>.
+			And it's also free! And lightweight!
+		</p>
+		
+		<p id="question">
+		</p>		
+		
+		<p class="footer">
+			jquery.create has brought to you by ern0 at linkbroker.hu
+		</p>
+			
+	</body>
+</html>
